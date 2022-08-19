@@ -11,39 +11,34 @@
  */
 
 const animales=   ['rata', 'buey', 'tigre','conejo', 'dragón','serpiente', 'caballo', 'oveja', 'mono', 'gallo', 'perro', 'cerdo']
-const elementos = ['madera', 'fuego', 'tierra', 'metal', 'agua'] 
-const anhoABuscar = 1967
+const elementos = ['madera','madera', 'fuego','fuego', 'tierra','tierra', 'metal','metal', 'agua','agua'] 
+let anhoABuscar = 1994
 let anhoInicio = 1924
 let indexAnimal=0
 let indexElement = 0
-
-while (anhoABuscar != anhoInicio){
-
-    for ( let indexAnimalRecorrido = 0; indexAnimalRecorrido < animales.length; indexAnimalRecorrido++) {
-
-            if (indexAnimalRecorrido%2==0 && indexAnimalRecorrido!= 0) {
-                indexElement+=1;
-                if (indexElement>=5) {
-                    indexElement=0
-                }     
-            }
-
-        anhoInicio+=1;
-        if ( anhoInicio === anhoABuscar ){ 
-            indexAnimal = indexAnimalRecorrido +1 
-            indexAnimalRecorrido=animales.length+1
-            indexElement+=1
-            if (indexElement>=5) {
-                indexElement=0
-            }   
-        }
-        
+function recorridoElemento(){
+    if (indexElement<9){
+        indexElement+=1
+    }else{
+        indexElement = 0;
     }
+
 }
 
+    while (anhoABuscar != anhoInicio){
 
-
-console.log(animales[indexAnimal], elementos[indexElement]);
-
-
+        for ( let indexAnimalRecorrido = 0; indexAnimalRecorrido < animales.length; indexAnimalRecorrido++) {
+                if (anhoABuscar ===anhoInicio) {
+                    indexAnimal = indexAnimalRecorrido
+                    indexAnimalRecorrido = animales.length+1;                    
+                }else{
+                    anhoInicio+=1;
+                    recorridoElemento()
+                }              
+        }
+       
+    }
+   
+    console.log(anhoABuscar);
+    console.log(animales[indexAnimal], elementos[indexElement]);
 
