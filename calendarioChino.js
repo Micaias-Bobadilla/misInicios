@@ -9,10 +9,9 @@
  * - Cada elemento se repite dos años seguidos.
  * - El último ciclo sexagenario comenzó en 1984 (Madera Rata).
  */
-
 const animales=   ['rata', 'buey', 'tigre','conejo', 'dragón','serpiente', 'caballo', 'oveja', 'mono', 'gallo', 'perro', 'cerdo']
 const elementos = ['madera','madera', 'fuego','fuego', 'tierra','tierra', 'metal','metal', 'agua','agua'] 
-let anhoABuscar = 1994
+let anhoABuscar = 1400
 let anhoInicio = 1924
 let indexAnimal=0
 let indexElement = 0
@@ -22,11 +21,9 @@ function recorridoElemento(){
     }else{
         indexElement = 0;
     }
-
 }
-
+function calendarioChino (anhoABuscar){
     while (anhoABuscar != anhoInicio){
-
         for ( let indexAnimalRecorrido = 0; indexAnimalRecorrido < animales.length; indexAnimalRecorrido++) {
                 if (anhoABuscar ===anhoInicio) {
                     indexAnimal = indexAnimalRecorrido
@@ -35,10 +32,13 @@ function recorridoElemento(){
                     anhoInicio+=1;
                     recorridoElemento()
                 }              
-        }
-       
+        } 
     }
-   
-    console.log(anhoABuscar);
-    console.log(animales[indexAnimal], elementos[indexElement]);
-
+    console.log("El año buscado: ", anhoABuscar);
+    console.log("Tu signo chino es: ", animales[indexAnimal], elementos[indexElement]);
+}
+if (anhoABuscar>=1924){
+    calendarioChino(anhoABuscar)
+}else{
+    console.log("Año incorrecto: ");
+}
