@@ -1,7 +1,7 @@
-const idImagen = document.getElementById("textoImagen1")
+const idImagen = document.getElementById("imagenTexto1")
 const idSpanImagen = document.getElementById("spanImagenTexto")
 
-idImagen.addEventListener("focusis", mostrarTexto)
+idImagen.addEventListener("focusin", mostrarTexto)
 idImagen.addEventListener("focusout", borrarTexto)
 
 function mostrarTexto(){
