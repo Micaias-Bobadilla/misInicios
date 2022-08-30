@@ -38,9 +38,9 @@ function borrarTexto2(){
 
 function mostrarTexto3(){
    
-    idSpanImagen2.innerHTML = "HOLA MDAFAKA"
+    idSpanImagen3.innerHTML = "HOLA MDAFAKA"
 }
 
 function borrarTexto3(){
-idSpanImagen2.innerHTML =""
+idSpanImagen3.innerHTML =""
 }

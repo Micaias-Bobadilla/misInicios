@@ -28,18 +28,64 @@ img:hover {
     border-radius: 20px;
 }
 
+#divContenidoAnimado {
+    display: grid;
+    grid-area:  1 1 2 3;
+}
+
+
 #divImagen {
     display: grid;
 }
 #imagenTexto1 {
     grid-column: 1;
     grid-row: 1;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 #imagenTexto2 {
     grid-column: 2;
     grid-row: 1;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 #imagenTexto3 {
     grid-column: 3;
     grid-row: 1;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+#divTextoDebajo {
+    display: grid;
+}
+#spanImagenTexto1 {
+    animation-direction: normal;
+    grid-column: 1;
+    grid-row: 2;
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color: darkorange;
+    max-width: 40%;
+    max-height: 20%;
+}
+#spanImagenTexto2 {
+    animation-direction: normal;
+    grid-column: 2;
+    grid-row: 2;
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color: darkorange;
+    max-width: 40%;
+    max-height: 20%;
+}
+#spanImagenTexto3 {
+    animation-direction: normal;
+    grid-column: 3;
+    grid-row: 2;
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color: darkorange;
+    max-width: 40%;
+    max-height: 20%;
 }
