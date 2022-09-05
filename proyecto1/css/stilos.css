@@ -16,21 +16,24 @@ h2 {
 }
 img {
     transition: 400ms;
-    max-width: 400px;
-    max-height:  400px;
+    max-width: 250px;
+    max-height:  250px;
     border-radius: 20px;
 }
 
 img:hover {
     transition: 400ms;
-    max-width: 350px;
-    max-height:  350px;
+    max-width: 200px;
+    max-height:  200px;
     border-radius: 20px;
 }
 
 #divContenidoAnimado {
     display: grid;
-    grid-area:  1 1 2 3;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
